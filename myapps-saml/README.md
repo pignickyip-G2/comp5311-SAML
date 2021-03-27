@@ -5,15 +5,7 @@ This is a project for PolyU COMP5311
 Go install below module
 
 ```node
-body-parser 
-ejs 
-eslint 
-express
-fs
-joi
-nodemon
-path 
-ldap-authentication (--save)
+express express-session cookie-parser body-parser passport passport-saml
 ```
 
 ## Docker image
