@@ -1,0 +1,3 @@
+docker command:
+docker run —-name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=comp5311-saml -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://localhost:4300/login/callback  -d kristophjunge/test-saml-idp
+
