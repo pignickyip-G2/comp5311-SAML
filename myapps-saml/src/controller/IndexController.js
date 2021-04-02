@@ -8,26 +8,26 @@ var path = require("path"),
 
 module.exports = {
 	index: function (req, res) {
-		res.status(200).send("hi");
+		res.status(200).redirect("/login");
 	},
 	login: function (req, res, next) {
-		console.log('-----------------------------');
-		console.log('/Start login handler');
 		next();
 	},
 	callback: function (req, res, next) {
-		console.log('-----------------------------');
-		console.log('/Start login callback');
+		console.log('go to login callback');
 		next();
 	},
 	callbacksuccess: function (req, res) {
-		console.log('-----------------------------');
-        console.log('login call back dumps');
-        console.log(req.user);
-        console.log('-----------------------------');
-        res.send('Log in Callback Success');
+		console.log('User login call back success');
+        res.status(200).redirect("/home");
+	},
+	gohome: function (req, res) {
+		res.status(200).send("succss");
+	},
+	metadata: function (req, res) {
+		next();
 	},
 	default: function (req, res) {
-		res.status(404).send("Error");
+		res.status(404).redirect("/login");
 	}
 };

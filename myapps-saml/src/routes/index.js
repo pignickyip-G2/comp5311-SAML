@@ -10,7 +10,10 @@ var path = require("path"),
 
 router.route("/").get(ctrl.index);
 router.route("/login").get(ctrl.login,passport.authenticate('samlStrategy'));
+router.route("/home").get(ctrl.gohome);
+router.route("/metadata").get(ctrl.metadata);
 router.route("/login/callback").post(ctrl.callback, passport.authenticate('samlStrategy'),ctrl.callbacksuccess);
+
 router.route("*").get(ctrl.default);
 
 module.exports = router;

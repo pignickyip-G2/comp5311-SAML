@@ -1,6 +1,14 @@
 docker command:
-docker run —-name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=comp5311-saml -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://localhost:4300/login/callback  -d kristophjunge/test-saml-idp
+docker run —-name=testsamlidp -p 8080:8080 -p 8443:8443 -e SIMPLESAMLPHP_SP_ENTITY_ID=comp5311-saml -e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://localhost:4300/login/callback   -d kristophjunge/test-saml-idp
 
-npm install express express-session cookie-parser body-parser passport passport-saml
+npm install express 
+npm install express-session 
+npm install cookie-parser 
+npm install body-parser 
+npm install passport 
+npm install passport-saml
 
 "C:\Program Files\Git\usr\bin\openssl.exe" req -x509 -newkey rsa:4096 -keyout certs\key.pem -out certs\cert.pem -nodes -days 900
+
+user1
+user1pass
